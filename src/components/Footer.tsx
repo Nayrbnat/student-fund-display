@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { toast } = useToast();
@@ -51,19 +52,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-gray-100 hover:text-white transition-colors">About Us</a>
+                <Link to="/about" className="text-gray-100 hover:text-white transition-colors">About Us</Link>
               </li>
               <li>
-                <a href="#performance" className="text-gray-100 hover:text-white transition-colors">Performance</a>
+                <Link to="/performance" className="text-gray-100 hover:text-white transition-colors">Performance</Link>
               </li>
               <li>
-                <a href="#team" className="text-gray-100 hover:text-white transition-colors">Achievements</a>
+                <Link to="/team" className="text-gray-100 hover:text-white transition-colors">Our Team</Link>
               </li>
               <li>
-                <a href="#process" className="text-gray-100 hover:text-white transition-colors">Our Process</a>
+                <Link to="/process" className="text-gray-100 hover:text-white transition-colors">Our Process</Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-100 hover:text-white transition-colors">Contact</a>
+                <Link to="/contact" className="text-gray-100 hover:text-white transition-colors">Contact</Link>
               </li>
             </ul>
           </div>

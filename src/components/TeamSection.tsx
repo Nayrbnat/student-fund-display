@@ -1,6 +1,8 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const departments = [
   {
@@ -110,6 +112,12 @@ const TeamSection = () => {
                   <div className="flex-shrink-0 h-6 w-6 rounded-full bg-teal-600 flex items-center justify-center text-white text-sm mr-3">3</div>
                   <p className="text-gray-700">Present a complete stock pitch with investment memo and model</p>
                 </div>
+              </div>
+              
+              <div className="mt-8">
+                <Button asChild className="bg-teal-600 hover:bg-teal-700">
+                  <Link to="/team">View Our Team</Link>
+                </Button>
               </div>
             </div>
             
