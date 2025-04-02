@@ -5,10 +5,10 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
   return (
     <div className="relative min-h-screen flex items-center">
-      {/* Professional background image */}
+      {/* LSE Central Building background image */}
       <div className="absolute inset-0 bg-cover bg-center bg-fixed" 
         style={{ 
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')"
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1538978265235-251950ec5b72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')"
         }}>
       </div>
 
