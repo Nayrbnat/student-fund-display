@@ -22,23 +22,26 @@ const Footer = () => {
   };
   
   return (
-    <footer className="bg-navy text-white">
+    <footer className="bg-teal-600 text-white">
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <h3 className="text-xl font-bold mb-6">Alpha Investments</h3>
-            <p className="text-gray-300 mb-6">
-              A student-managed investment fund focused on delivering competitive returns 
-              while providing hands-on financial experience to the next generation of investment leaders.
+            <div className="flex items-center mb-6">
+              <img src="/public/lovable-uploads/61f4ea1c-590f-4f01-9315-10359c888965.png" alt="MBP Capital Logo" className="h-10 bg-white p-1 rounded" />
+              <h3 className="text-xl font-bold ml-2">MBP Capital</h3>
+            </div>
+            <p className="text-gray-100 mb-6">
+              LSE's foremost real money student investment fund, offering a forum for students to discuss financial markets 
+              and learn how to run an actively-managed portfolio.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-gold transition-colors">
+              <a href="https://linkedin.com/company/mbp-capital" target="_blank" rel="noopener noreferrer" className="text-white hover:text-teal-200 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-white hover:text-gold transition-colors">
+              <a href="#" className="text-white hover:text-teal-200 transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-white hover:text-gold transition-colors">
+              <a href="#" className="text-white hover:text-teal-200 transition-colors">
                 <Facebook size={20} />
               </a>
             </div>
@@ -48,19 +51,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a>
+                <a href="#about" className="text-gray-100 hover:text-white transition-colors">About Us</a>
               </li>
               <li>
-                <a href="#performance" className="text-gray-300 hover:text-white transition-colors">Performance</a>
+                <a href="#performance" className="text-gray-100 hover:text-white transition-colors">Performance</a>
               </li>
               <li>
-                <a href="#team" className="text-gray-300 hover:text-white transition-colors">Our Team</a>
+                <a href="#team" className="text-gray-100 hover:text-white transition-colors">Achievements</a>
               </li>
               <li>
-                <a href="#process" className="text-gray-300 hover:text-white transition-colors">Investment Process</a>
+                <a href="#process" className="text-gray-100 hover:text-white transition-colors">Our Process</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+                <a href="#contact" className="text-gray-100 hover:text-white transition-colors">Contact</a>
               </li>
             </ul>
           </div>
@@ -69,28 +72,30 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <Mail className="h-5 w-5 mr-3 text-gold" />
-                <span className="text-gray-300">info@alphainvestments.edu</span>
+                <Mail className="h-5 w-5 mr-3 text-teal-200" />
+                <span className="text-gray-100">info@mbpcapital.org</span>
               </li>
               <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-3 text-gold" />
-                <span className="text-gray-300">(555) 123-4567</span>
-              </li>
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 text-gold" />
-                <div className="text-gray-300">
-                  School of Business<br />
-                  123 University Avenue<br />
-                  Cambridge, MA 02138
+                <MapPin className="h-5 w-5 mr-3 text-teal-200" />
+                <div className="text-gray-100">
+                  London School of Economics<br />
+                  Houghton Street<br />
+                  London, WC2A 2AE
                 </div>
+              </li>
+              <li className="flex items-start">
+                <Linkedin className="h-5 w-5 mr-3 text-teal-200" />
+                <a href="https://linkedin.com/company/mbp-capital" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:underline">
+                  linkedin.com/company/mbp-capital
+                </a>
               </li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-6">Newsletter</h3>
-            <p className="text-gray-300 mb-4">
-              Subscribe to our newsletter for the latest updates on our fund's performance and activities.
+            <p className="text-gray-100 mb-4">
+              Subscribe to our newsletter for updates on events, recruitment opportunities, and market insights.
             </p>
             <form onSubmit={handleSubscribe} className="space-y-3">
               <Input
@@ -99,11 +104,11 @@ const Footer = () => {
                 type="email"
                 placeholder="Your email address"
                 required
-                className="bg-navy-light border-navy-light text-white placeholder:text-gray-400"
+                className="bg-teal-700 border-teal-700 text-white placeholder:text-gray-300"
               />
               <Button 
                 type="submit" 
-                className="w-full bg-gold hover:bg-gold-light text-navy font-semibold"
+                className="w-full bg-white hover:bg-gray-100 text-teal-600 font-semibold"
               >
                 Subscribe
               </Button>
@@ -111,8 +116,8 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-navy-light text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} Alpha Investments. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-teal-500 text-center text-gray-100 text-sm">
+          <p>&copy; {new Date().getFullYear()} MBP Capital. All rights reserved.</p>
         </div>
       </div>
     </footer>

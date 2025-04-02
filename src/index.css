@@ -64,7 +64,7 @@
   }
 
   .heading-gradient {
-    @apply bg-gradient-to-r from-navy to-navy-light bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-teal-600 to-teal-400 bg-clip-text text-transparent;
   }
 
   .animate-on-scroll {

@@ -1,51 +1,51 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Search, BarChart2, LineChart, CheckCircle } from "lucide-react";
+import { Search, BarChart2, LineChart, CheckCircle, GraduationCap } from "lucide-react";
 
 const ProcessSection = () => {
   return (
     <section id="process" className="section bg-gray-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Our Investment Process</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Our Process</h2>
           <p className="text-gray-700 text-lg">
-            We follow a structured, disciplined approach to identifying investment opportunities
-            and managing portfolio risk.
+            We believe in talent and leadership development – giving stellar analysts the opportunity 
+            to grow and develop within the MBP family.
           </p>
         </div>
 
         <div className="relative">
           {/* Connecting line */}
-          <div className="absolute left-1/2 top-8 bottom-8 w-0.5 bg-navy/20 -translate-x-1/2 hidden md:block"></div>
+          <div className="absolute left-1/2 top-8 bottom-8 w-0.5 bg-teal-600/20 -translate-x-1/2 hidden md:block"></div>
           
           <div className="space-y-12 md:space-y-0 relative">
             {/* Step 1 */}
             <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center mb-12">
               <div className="md:text-right">
                 <div className="bg-white rounded-xl shadow-md p-6 mb-8 md:mb-0">
-                  <h3 className="text-xl font-semibold text-navy mb-3">Research & Idea Generation</h3>
+                  <h3 className="text-xl font-semibold text-teal-600 mb-3">Weekly Pod Meetings</h3>
                   <p className="text-gray-700">
-                    Our analysts conduct comprehensive research across sectors, using fundamental 
-                    analysis, industry trends, and macroeconomic insights to identify potential investments.
+                    Every week, analysts gather within pods to discuss their investment theses. 
+                    Senior members provide feedback and work on investment ideas with analysts.
                   </p>
                   <div className="mt-4 flex flex-col space-y-2">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
-                      <span>Fundamental Analysis</span>
+                    <div className="flex items-center text-sm text-gray-600 md:justify-end">
+                      <span>Idea Generation</span>
+                      <CheckCircle className="h-4 w-4 text-teal-500 ml-2 md:order-first md:mr-2 md:ml-0" />
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
-                      <span>Industry Research</span>
+                    <div className="flex items-center text-sm text-gray-600 md:justify-end">
+                      <span>Thesis Development</span>
+                      <CheckCircle className="h-4 w-4 text-teal-500 ml-2 md:order-first md:mr-2 md:ml-0" />
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
-                      <span>Macroeconomic Assessment</span>
+                    <div className="flex items-center text-sm text-gray-600 md:justify-end">
+                      <span>Senior Feedback</span>
+                      <CheckCircle className="h-4 w-4 text-teal-500 ml-2 md:order-first md:mr-2 md:ml-0" />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="hidden md:flex md:justify-start">
-                <div className="h-16 w-16 rounded-full bg-navy flex items-center justify-center text-white border-4 border-white shadow-lg">
+                <div className="h-16 w-16 rounded-full bg-teal-600 flex items-center justify-center text-white border-4 border-white shadow-lg">
                   <Search className="h-7 w-7" />
                 </div>
               </div>
@@ -54,29 +54,29 @@ const ProcessSection = () => {
             {/* Step 2 */}
             <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center mb-12">
               <div className="hidden md:flex md:justify-end order-last md:order-first">
-                <div className="h-16 w-16 rounded-full bg-navy flex items-center justify-center text-white border-4 border-white shadow-lg">
+                <div className="h-16 w-16 rounded-full bg-teal-600 flex items-center justify-center text-white border-4 border-white shadow-lg">
                   <BarChart2 className="h-7 w-7" />
                 </div>
               </div>
               <div className="md:text-left">
                 <div className="bg-white rounded-xl shadow-md p-6 mb-8 md:mb-0">
-                  <h3 className="text-xl font-semibold text-navy mb-3">Analysis & Valuation</h3>
+                  <h3 className="text-xl font-semibold text-teal-600 mb-3">Investment Pitch</h3>
                   <p className="text-gray-700">
-                    We build detailed financial models and conduct thorough valuation analysis
-                    to determine fair values and identify mispriced securities with attractive risk-reward profiles.
+                    Every member must pitch at least once a year to renew their membership. 
+                    Analysts present their investment memo and model to the entire society for Q&A.
                   </p>
                   <div className="mt-4 flex flex-col space-y-2">
                     <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
+                      <CheckCircle className="h-4 w-4 text-teal-500 mr-2" />
+                      <span>Investment Memo</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="h-4 w-4 text-teal-500 mr-2" />
                       <span>Financial Modeling</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
-                      <span>Valuation Techniques</span>
-                    </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
-                      <span>Risk Assessment</span>
+                      <CheckCircle className="h-4 w-4 text-teal-500 mr-2" />
+                      <span>Q&A Session</span>
                     </div>
                   </div>
                 </div>
@@ -87,29 +87,29 @@ const ProcessSection = () => {
             <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center">
               <div className="md:text-right">
                 <div className="bg-white rounded-xl shadow-md p-6 mb-8 md:mb-0">
-                  <h3 className="text-xl font-semibold text-navy mb-3">Portfolio Construction & Monitoring</h3>
+                  <h3 className="text-xl font-semibold text-teal-600 mb-3">Investment Committee Decision</h3>
                   <p className="text-gray-700">
-                    Our investment committee reviews proposals, allocates capital, and continuously 
-                    monitors positions, making adjustments as market conditions and fundamentals evolve.
+                    The investment committee analyzes the investment memo, model, and follow-up 
+                    before making a final investment decision.
                   </p>
                   <div className="mt-4 flex flex-col space-y-2">
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
-                      <span>Position Sizing</span>
+                    <div className="flex items-center text-sm text-gray-600 md:justify-end">
+                      <span>Risk Analysis</span>
+                      <CheckCircle className="h-4 w-4 text-teal-500 ml-2 md:order-first md:mr-2 md:ml-0" />
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
-                      <span>Risk Management</span>
+                    <div className="flex items-center text-sm text-gray-600 md:justify-end">
+                      <span>Portfolio Fit</span>
+                      <CheckCircle className="h-4 w-4 text-teal-500 ml-2 md:order-first md:mr-2 md:ml-0" />
                     </div>
-                    <div className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-gold mr-2" />
-                      <span>Performance Tracking</span>
+                    <div className="flex items-center text-sm text-gray-600 md:justify-end">
+                      <span>Capital Allocation</span>
+                      <CheckCircle className="h-4 w-4 text-teal-500 ml-2 md:order-first md:mr-2 md:ml-0" />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="hidden md:flex md:justify-start">
-                <div className="h-16 w-16 rounded-full bg-navy flex items-center justify-center text-white border-4 border-white shadow-lg">
+                <div className="h-16 w-16 rounded-full bg-teal-600 flex items-center justify-center text-white border-4 border-white shadow-lg">
                   <LineChart className="h-7 w-7" />
                 </div>
               </div>
@@ -120,32 +120,33 @@ const ProcessSection = () => {
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card className="border-none shadow-lg bg-white">
             <CardContent className="p-8">
-              <h3 className="text-xl font-semibold text-navy mb-4">Investment Philosophy</h3>
+              <h3 className="text-xl font-semibold text-teal-600 mb-4">Investment Philosophy</h3>
               <p className="text-gray-700">
-                We believe in a value-oriented approach that combines deep fundamental 
-                research with disciplined risk management to identify mispriced securities
-                with attractive long-term potential.
+                We believe in rigorous analysis that combines fundamental research with macroeconomic insights. 
+                Our approach varies by division but maintains a focus on asymmetric risk-reward opportunities.
               </p>
             </CardContent>
           </Card>
           
           <Card className="border-none shadow-lg bg-white">
             <CardContent className="p-8">
-              <h3 className="text-xl font-semibold text-navy mb-4">Risk Management</h3>
+              <h3 className="text-xl font-semibold text-teal-600 mb-4">Analyst Development</h3>
               <p className="text-gray-700">
-                Our risk framework incorporates position sizing limits, sector exposure 
-                constraints, and regular stress testing to ensure portfolio resilience
-                across various market environments.
+                We rotate analysts across pods annually to maximize learning opportunities. 
+                Our bootcamp program covers eight essential investment topics culminating in a real stock pitch.
               </p>
+              <div className="mt-4 flex justify-center">
+                <GraduationCap className="h-12 w-12 text-teal-400" />
+              </div>
             </CardContent>
           </Card>
           
           <Card className="border-none shadow-lg bg-white">
             <CardContent className="p-8">
-              <h3 className="text-xl font-semibold text-navy mb-4">Education & Development</h3>
+              <h3 className="text-xl font-semibold text-teal-600 mb-4">Our Alumni Network</h3>
               <p className="text-gray-700">
-                Beyond returns, we focus on developing the next generation of investment 
-                professionals through hands-on experience, mentorship, and continuous learning.
+                Joining the MBP family confers unparalleled opportunities to network with investment professionals 
+                from both the buy and sell side, with our alumni working at top financial institutions.
               </p>
             </CardContent>
           </Card>

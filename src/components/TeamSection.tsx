@@ -2,128 +2,126 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
 
-const TeamMember = ({ name, role, image, linkedin }) => {
+const departments = [
+  {
+    name: "Macro Research",
+    description: "Global economic analysis and multi-asset trading"
+  },
+  {
+    name: "Fundamental Equities",
+    description: "Bottom-up stock analysis and valuation"
+  },
+  {
+    name: "Risk Management",
+    description: "Portfolio risk analysis and optimization"
+  },
+  {
+    name: "Investment Committee",
+    description: "Final decision making on all investments"
+  }
+];
+
+const AchievementCard = ({ year, competition, achievement, team = null }) => {
   return (
-    <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 group">
-      <div className="overflow-hidden rounded-t-lg h-64 relative">
-        <img 
-          src={image} 
-          alt={name} 
-          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center">
-          <a 
-            href={linkedin} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-white mb-6 p-2 bg-navy/60 rounded-full hover:bg-navy transition-colors"
-          >
-            <Linkedin size={20} />
-          </a>
-        </div>
-      </div>
+    <Card className="border-none shadow-md hover:shadow-lg transition-all duration-300">
       <CardContent className="p-6">
-        <h3 className="font-semibold text-lg">{name}</h3>
-        <p className="text-gray-600">{role}</p>
+        <div className="flex justify-between items-start">
+          <div>
+            <h4 className="font-semibold text-lg">{competition}</h4>
+            {team && <p className="text-sm text-gray-600 mt-1">by {team}</p>}
+            <p className="text-teal-600 font-semibold mt-2">{achievement}</p>
+          </div>
+          <span className="bg-teal-600/10 text-teal-600 px-3 py-1 rounded-full text-sm font-medium">
+            {year}
+          </span>
+        </div>
       </CardContent>
     </Card>
   );
 };
 
 const TeamSection = () => {
-  const teamMembers = [
-    {
-      name: "Alexandra Chen",
-      role: "Fund President",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=1000",
-      linkedin: "#"
-    },
-    {
-      name: "Marcus Williams",
-      role: "Chief Investment Officer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000",
-      linkedin: "#"
-    },
-    {
-      name: "Sophia Rodriguez",
-      role: "Portfolio Manager",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=1000",
-      linkedin: "#"
-    },
-    {
-      name: "James Kim",
-      role: "Risk Officer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=1000",
-      linkedin: "#"
-    }
-  ];
-
   return (
     <section id="team" className="section bg-white">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Meet Our Team</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 heading-gradient">Our Achievements</h2>
           <p className="text-gray-700 text-lg">
-            Our talented student leaders manage all aspects of the fund, from investment research to portfolio management.
+            Our teams have excelled in various competitions, showcasing the depth of knowledge and analysis capabilities of our members.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <TeamMember 
-              key={index}
-              name={member.name}
-              role={member.role}
-              image={member.image}
-              linkedin={member.linkedin}
-            />
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <AchievementCard 
+            year="2025"
+            competition="UBS Stock Pitch Competition"
+            achievement="2nd Place"
+          />
+          <AchievementCard 
+            year="2025"
+            competition="Dartmouth DIPP"
+            achievement="Semi-finalist"
+          />
+          <AchievementCard 
+            year="2024"
+            competition="McGill Global Stock Pitch"
+            achievement="Semi-finalist & Best Interschool Team Globally"
+            team="All three LSE teams were from MBP"
+          />
+          <AchievementCard 
+            year="2023"
+            competition="VPC"
+            achievement="1st Place"
+            team="Amanda and Sarah - Short Hayward Holdings"
+          />
+          <AchievementCard 
+            year="2022"
+            competition="Varsity Stock Pitch Competition"
+            achievement="2nd Place"
+            team="Ryan D'Angelo and team - Long B&M"
+          />
+          <AchievementCard 
+            year="2022"
+            competition="Varsity Stock Pitch Competition"
+            achievement="Finalist"
+            team="Multiple MBP teams"
+          />
         </div>
 
-        <div className="mt-20 bg-navy/5 rounded-xl p-8 lg:p-12">
+        <div className="mt-20 bg-teal-600/5 rounded-xl p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-semibold text-navy mb-4">Join Our Team</h3>
+              <h3 className="text-2xl font-semibold text-teal-600 mb-4">Join Our Team</h3>
               <p className="text-gray-700 mb-6">
-                We're always looking for talented and passionate students to join our investment team. 
-                As a member, you'll gain hands-on experience in financial analysis, investment research,
-                and portfolio management.
+                We recruit first years through a selective and rigorous bootcamp, culminating in a stock pitch 
+                before being minted as an analyst. Our bootcamp covers essential investment concepts across 
+                both macro and fundamental analysis approaches.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-navy flex items-center justify-center text-white text-sm mr-3">1</div>
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-teal-600 flex items-center justify-center text-white text-sm mr-3">1</div>
                   <p className="text-gray-700">Complete our online application form</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-navy flex items-center justify-center text-white text-sm mr-3">2</div>
-                  <p className="text-gray-700">Submit your resume and academic transcript</p>
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-teal-600 flex items-center justify-center text-white text-sm mr-3">2</div>
+                  <p className="text-gray-700">Participate in our intensive bootcamp program</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-navy flex items-center justify-center text-white text-sm mr-3">3</div>
-                  <p className="text-gray-700">Participate in our interview process</p>
+                  <div className="flex-shrink-0 h-6 w-6 rounded-full bg-teal-600 flex items-center justify-center text-white text-sm mr-3">3</div>
+                  <p className="text-gray-700">Present a complete stock pitch with investment memo and model</p>
                 </div>
               </div>
             </div>
             
             <div className="bg-white rounded-xl shadow-md p-6 lg:p-8">
-              <h4 className="text-xl font-semibold text-navy mb-4">Departments</h4>
+              <h4 className="text-xl font-semibold text-teal-600 mb-4">Our Departments</h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-navy/5 p-4 rounded-lg">
-                  <h5 className="font-semibold text-navy">Equity Research</h5>
-                  <p className="text-sm text-gray-600 mt-1">Fundamental analysis of public equities</p>
-                </div>
-                <div className="bg-navy/5 p-4 rounded-lg">
-                  <h5 className="font-semibold text-navy">Fixed Income</h5>
-                  <p className="text-sm text-gray-600 mt-1">Research on bonds and credit instruments</p>
-                </div>
-                <div className="bg-navy/5 p-4 rounded-lg">
-                  <h5 className="font-semibold text-navy">Quantitative Analysis</h5>
-                  <p className="text-sm text-gray-600 mt-1">Data-driven investment strategies</p>
-                </div>
-                <div className="bg-navy/5 p-4 rounded-lg">
-                  <h5 className="font-semibold text-navy">ESG Investing</h5>
-                  <p className="text-sm text-gray-600 mt-1">Sustainability and impact analysis</p>
-                </div>
+                {departments.map((dept, index) => (
+                  <div key={index} className="bg-teal-600/5 p-4 rounded-lg">
+                    <h5 className="font-semibold text-teal-600">{dept.name}</h5>
+                    <p className="text-sm text-gray-600 mt-1">{dept.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
