@@ -201,7 +201,13 @@ const PerformancePage = () => {
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="year" />
                   <YAxis tickFormatter={(value) => `${value}%`} />
-                  <Tooltip formatter={(value) => [`${value.toFixed(1)}%`, 'Return']} />
+                  <Tooltip formatter={(value) => {
+                    // Check if value is a number before calling toFixed
+                    return [
+                      typeof value === 'number' ? `${value.toFixed(1)}%` : `${value}%`, 
+                      'Return'
+                    ];
+                  }} />
                   <Legend />
                   <Line
                     type="monotone"
@@ -239,7 +245,13 @@ const PerformancePage = () => {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis type="number" tickFormatter={(value) => `${value}%`} />
                     <YAxis dataKey="name" type="category" width={100} />
-                    <Tooltip formatter={(value) => [`${value}%`, 'Allocation']} />
+                    <Tooltip formatter={(value) => {
+                      // Check if value is a number or string
+                      return [
+                        `${value}%`, 
+                        'Allocation'
+                      ];
+                    }} />
                     <Bar dataKey="value" fill="#1a3a5f" />
                   </BarChart>
                 </ResponsiveContainer>
@@ -259,7 +271,13 @@ const PerformancePage = () => {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis type="number" tickFormatter={(value) => `${value}%`} />
                     <YAxis dataKey="name" type="category" width={100} />
-                    <Tooltip formatter={(value) => [`${value}%`, 'Allocation']} />
+                    <Tooltip formatter={(value) => {
+                      // Check if value is a number or string
+                      return [
+                        `${value}%`, 
+                        'Allocation'
+                      ];
+                    }} />
                     <Bar dataKey="value" fill="#3a5a7f" />
                   </BarChart>
                 </ResponsiveContainer>
