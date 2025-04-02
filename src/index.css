@@ -36,15 +36,12 @@
     --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* New formal color scheme - dark blue */
+    --formal-dark: 215 50% 23%;
+    --formal-light: 210 40% 98%;
+    --formal-accent: 215 60% 50%;
+    --formal-muted: 215 30% 90%;
   }
 
   * {
@@ -56,7 +53,7 @@
   }
 
   .section {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
   }
 
   .container-custom {
@@ -64,14 +61,68 @@
   }
 
   .heading-gradient {
-    @apply bg-gradient-to-r from-teal-600 to-teal-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#1a3a5f] to-[#3a5a7f] bg-clip-text text-transparent;
   }
 
+  /* Enhanced scroll animations */
   .animate-on-scroll {
     @apply opacity-0 translate-y-10 transition-all duration-700 ease-out;
   }
 
   .animate-on-scroll.active {
     @apply opacity-100 translate-y-0;
+  }
+  
+  .animate-fade-in {
+    @apply opacity-0 transition-opacity duration-1000 ease-out;
+  }
+  
+  .animate-fade-in.active {
+    @apply opacity-100;
+  }
+  
+  .animate-slide-in-right {
+    @apply opacity-0 translate-x-10 transition-all duration-700 ease-out;
+  }
+  
+  .animate-slide-in-right.active {
+    @apply opacity-100 translate-x-0;
+  }
+  
+  .animate-slide-in-left {
+    @apply opacity-0 -translate-x-10 transition-all duration-700 ease-out;
+  }
+  
+  .animate-slide-in-left.active {
+    @apply opacity-100 translate-x-0;
+  }
+  
+  .animate-scale-in {
+    @apply opacity-0 scale-95 transition-all duration-700 ease-out;
+  }
+  
+  .animate-scale-in.active {
+    @apply opacity-100 scale-100;
+  }
+  
+  /* Formal styling elements */
+  .formal-section {
+    @apply relative overflow-hidden;
+  }
+  
+  .formal-overlay {
+    @apply absolute inset-0 bg-black/50 z-10;
+  }
+  
+  .formal-content {
+    @apply relative z-20;
+  }
+  
+  .formal-backdrop {
+    @apply absolute inset-0 bg-cover bg-center bg-no-repeat -z-10;
+  }
+  
+  .formal-card {
+    @apply bg-white/90 backdrop-blur-sm shadow-xl;
   }
 }

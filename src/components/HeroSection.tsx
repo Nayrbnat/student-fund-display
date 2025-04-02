@@ -4,27 +4,28 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen flex items-center bg-gradient-to-br from-white to-gray-100">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-10 -right-10 w-72 h-72 bg-teal-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 -left-24 w-72 h-72 bg-teal-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-10 right-1/4 w-80 h-80 bg-teal-600/5 rounded-full blur-3xl"></div>
+    <div className="relative min-h-screen flex items-center">
+      {/* Professional background image */}
+      <div className="absolute inset-0 bg-cover bg-center bg-fixed" 
+        style={{ 
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')"
+        }}>
       </div>
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
-            <h1 className="text-5xl md:text-6xl font-bold heading-gradient">
-              LSE's Foremost Student Investment Fund
+            <h1 className="text-5xl md:text-6xl font-bold text-white">
+              <span className="block">MBP Capital</span>
+              <span className="text-3xl md:text-4xl block mt-2 text-gray-300">LSE's Foremost Student Investment Fund</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 max-w-2xl">
-              Founded in 2015, MBP Capital offers a forum for students to discuss financial markets and
-              learn how to run an actively-managed portfolio across equities, fixed income, commodities & FX.
+            <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
+              Founded in 2015, we offer a forum for students to discuss financial markets and
+              learn portfolio management across equities, fixed income, commodities & FX.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
-                className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-6 rounded-md text-lg"
+                className="bg-white text-[#1a3a5f] hover:bg-gray-200 px-8 py-6 rounded-none text-lg"
                 asChild
               >
                 <a href="#about">
@@ -34,7 +35,7 @@ const HeroSection = () => {
               </Button>
               <Button 
                 variant="outline" 
-                className="border-teal-600 text-teal-600 hover:bg-teal-600/5 px-8 py-6 rounded-md text-lg"
+                className="border-white text-white hover:bg-white/20 px-8 py-6 rounded-none text-lg"
                 asChild
               >
                 <a href="#performance">Our Performance</a>
@@ -42,26 +43,24 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="relative hidden lg:block">
-            <div className="absolute inset-0 bg-teal-600/10 rounded-2xl rotate-3 transform"></div>
-            <div className="absolute inset-0 bg-teal-400/10 rounded-2xl -rotate-2 transform"></div>
-            <div className="relative bg-white p-8 rounded-2xl shadow-xl">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-teal-600/5 p-6 rounded-lg text-center">
-                  <span className="block text-4xl font-bold text-teal-600">2015</span>
-                  <span className="text-gray-600 text-sm">Year Founded</span>
+          <div className="relative hidden lg:block animate-slide-in-right">
+            <div className="bg-white/5 backdrop-blur-sm p-10 border border-white/10 rounded-sm">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-white/10 p-8 rounded-sm text-center">
+                  <span className="block text-4xl font-bold text-white">2015</span>
+                  <span className="text-gray-300 text-sm">Year Founded</span>
                 </div>
-                <div className="bg-teal-600/5 p-6 rounded-lg text-center">
-                  <span className="block text-4xl font-bold text-teal-600">LSE</span>
-                  <span className="text-gray-600 text-sm">University</span>
+                <div className="bg-white/10 p-8 rounded-sm text-center">
+                  <span className="block text-4xl font-bold text-white">LSE</span>
+                  <span className="text-gray-300 text-sm">University</span>
                 </div>
-                <div className="bg-teal-600/5 p-6 rounded-lg text-center">
-                  <span className="block text-4xl font-bold text-teal-600">50+</span>
-                  <span className="text-gray-600 text-sm">Student Analysts</span>
+                <div className="bg-white/10 p-8 rounded-sm text-center">
+                  <span className="block text-4xl font-bold text-white">50+</span>
+                  <span className="text-gray-300 text-sm">Student Analysts</span>
                 </div>
-                <div className="bg-teal-600/5 p-6 rounded-lg text-center">
-                  <span className="block text-4xl font-bold text-teal-600">2</span>
-                  <span className="text-gray-600 text-sm">Investment Divisions</span>
+                <div className="bg-white/10 p-8 rounded-sm text-center">
+                  <span className="block text-4xl font-bold text-white">2</span>
+                  <span className="text-gray-300 text-sm">Investment Divisions</span>
                 </div>
               </div>
             </div>

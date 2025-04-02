@@ -11,29 +11,52 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    // Simple animation for elements with animate-on-scroll class
+    // Enhanced animation for elements with animation classes
     const animateElements = () => {
-      const elements = document.querySelectorAll('.animate-on-scroll');
+      const animationClasses = [
+        '.animate-on-scroll',
+        '.animate-fade-in',
+        '.animate-slide-in-right',
+        '.animate-slide-in-left',
+        '.animate-scale-in'
+      ];
       
-      elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+      animationClasses.forEach(className => {
+        const elements = document.querySelectorAll(className);
         
-        if (elementTop < windowHeight * 0.9) {
-          element.classList.add('active');
-        }
+        elements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          // Activate animation when element is 20% into the viewport
+          if (elementTop < windowHeight * 0.8) {
+            element.classList.add('active');
+          } else {
+            // Optional: remove active class when scrolling back up
+            // element.classList.remove('active');
+          }
+        });
       });
     };
     
     // Run on initial load
     window.addEventListener('load', animateElements);
     
-    // Run on scroll
-    window.addEventListener('scroll', animateElements);
+    // Run on scroll with throttling for better performance
+    let lastScrollTime = 0;
+    const handleScroll = () => {
+      const now = Date.now();
+      if (now - lastScrollTime > 50) { // Throttle to 50ms
+        lastScrollTime = now;
+        animateElements();
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
     
     return () => {
       window.removeEventListener('load', animateElements);
-      window.removeEventListener('scroll', animateElements);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
